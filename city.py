@@ -2,7 +2,7 @@ class City:
     def __init__(self, city_name, state):
         self.city_name = city_name
         self.state = state
-#
+
     def __repr__(self):
         return f"{self.city_name}, {self.state}"
 

@@ -9,7 +9,7 @@ class EmploymentData:
 
     def __repr__(self):
         return f"EmploymentData({self.city}, {self.year}, {self.unemployment_rate}%, {self.education_level}%)"
-#
+
     def __eq__(self, other):
         return (self is other or
                 type(other) == EmploymentData and

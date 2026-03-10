@@ -1,7 +1,7 @@
 import csv
 from city import City
 from employment_data import EmploymentData
-#
+
 class DataSet:
     def __init__(self):
         self.records = []
