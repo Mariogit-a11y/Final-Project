@@ -25,8 +25,8 @@ def main():
     print(f"Medium: {len(groups['Medium'])}")
     print(f"Low: {len(groups['Low'])}")
 
-    ds.sort_records(by="unemployment", descending=True)
     print(f"\nTop 5 Highest Unemployment Records:")
+    ds.sort_records(by="unemployment", descending=True)
     for record in ds.records[:5]:
         print(record.display_summary())
 
