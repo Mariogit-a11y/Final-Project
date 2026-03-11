@@ -27,7 +27,7 @@ class EmploymentData:
             return "Low"
 
     def display_summary(self):
-        category = self.categorize_education
+        category = self.categorize_education()
         return (f"City:{self.city.city_name}, {self.city.state}\n"
                 f"Year:{self.year}\n"
                 f"Unemployment rate:{self.unemployment_rate}%\n"
