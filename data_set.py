@@ -19,20 +19,20 @@ class DataSet:
         with open(unemployment_file, "r" ,newline='') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                key = (row["City"],row["State"], row["Year"])
+                key = (row["city"],row["state"], row["year"])
                 unemployment_map[key] = float(row["unemployment_rate_pct"])
 
         with open(education_file, "r" ,newline='') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                key = (row["City"], row["State"], row["Year"])
+                key = (row["city"], row["state"], row["year"])
                 if key not in unemployment_map:
                     continue
                 bachelors = float(row["bachelors_pct"])
                 graduate = float(row["graduate_pct"])
                 education_level = round(bachelors + graduate, 2)
-                city_obj = City(row["City"], row["State"])
-                record = EmploymentData(city_obj,int(row["Year"]), unemployment_map[key], education_level)
+                city_obj = City(row["city"], row["state"])
+                record = EmploymentData(city_obj,int(row["year"]), unemployment_map[key], education_level)
                 self.records.append(record)
 
     def calculate_averages(self):

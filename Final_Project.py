@@ -8,7 +8,7 @@ def main():
 
     averages = ds.calculate_averages()
     print("\nOverall Averages:")
-    print(f"Average Unemployment Rate: {averages['Unemployment_rate']}%")
+    print(f"Average Unemployment Rate: {averages['average_unemployment']}%")
     print(f"Average Education Rate (Bachelors and Graduates): {averages['average_education']}%")
 
     highest = ds.find_highest()
